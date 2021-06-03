@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --BrightYellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --LightGray: hsl(204, 43%, 93%);
+    --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 16px;
+
+    box-shadow: 10px 2px 100px 10px lightgray;
+    border-radius: 5px;
+    outline: 0px;
+}
+
+html {
+    margin: 0 auto;
+    width: 80%;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+h2 {
+    color: var(--Cyan);
+}
+
+h3,
+h4,
+p {
+    color: white;
+}
+
+.grid-item-1 > h3 {
+    color: var(--BrightYellow);
+}
+
+.grid-item-1 > p {
+    color: var(--GrayishBlue);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    flex-wrap: nowrap;
+    text-align: left;
+
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.grid-item-1 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
+
+    background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-item-2 {
+    background-color: #2bb3af;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.grid-item-2 > h3 {
+    margin-top: 2rem;
+}
+
+.billing-cycle {
+    display: inline-flex;
+    color: #21d8d59a;
+    font-weight: bold;
+}
+.btn {
+    /* centre the button */
+
+    background-color: var(--BrightYellow);
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 5px 10px 5px 0px #219f9a;
+    color: var(--LightGray);
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 900;
+    padding-bottom: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.8rem;
+    width: 80%;
+}
+
+.grid-item-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #49bebc;
+
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-item-3 > h3 {
+    margin-top: 2rem;
+}
+
+.dollar-sign {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+}
+
+ul {
+    /* because we are removing the bullet points in the list, we need to remove the padding left from the UL */
+    padding-left: 0;
+}
+
+li {
+    list-style: none;
+    color: var(--LightGray);
+    opacity: 0.5;
+    line-height: 1.5;
+}
+
+footer > p {
+    color: black;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .grid-item-1 {
+        line-height: 2;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .grid-item-2 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .grid-item-2 .btn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .grid-item-3 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
